@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=dev webpack-dev-server --progress --colors",
+    "start": "NODE_ENV=dev webpack-dev-server --progress --inline --colors --host 0.0.0.0 --port 8081 --public dianping.yixiaoli.cn**",
     "mock": "node --harmony ./mock/server.js",
     "build": "rm -rf ./build && NODE_ENV=production webpack --config ./webpack.production.config.js --progress --colors"
   },
