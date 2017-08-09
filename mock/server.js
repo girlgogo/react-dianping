@@ -1,5 +1,7 @@
-var app = require('koa')();
+var koa = require('koa');
+var app = new koa();
 var router = require('koa-router')();
+var koa_static = require('koa-static-server');
 
 //首页--广告（超值特惠）
 var homeAdData = require('./home/ad.js')
@@ -89,10 +91,12 @@ router.post('/api/submitComment', function *(next) {
     errno: 0,
     msg: 'ok'
   }
-
-
 })
 
 app.use(router.routes())
   .use(router.allowedMethods());
+app.use(koa_static({
+  rootDir: './build/',
+  rootPath: '/'
+}))
 app.listen(8082);
