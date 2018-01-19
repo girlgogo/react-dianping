@@ -12,7 +12,7 @@ class Category extends React.Component {
     this.state = {
       index: 0
     }
-}
+  }
   render() {
     const opt = {
       auto: 2000,

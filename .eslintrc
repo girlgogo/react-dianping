@@ -12,8 +12,8 @@
     },
     "sourceType": "module"
   },
-    "react"
   "plugins": [
+    "react"
   ],
   "rules": {
     "indent": 0,
